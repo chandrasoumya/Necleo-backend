@@ -1,13 +1,19 @@
 {
     "version": 2,
     "builds": [
-      { "src": "server.js", "use": "@vercel/node" }
+        {
+            "src": ".index.js",
+            "dest": "@vercel/node"
+          }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/server.js" }
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
     ],
     "env": {
-      "MONGODB_URI": "mongodb://localhost:27017/Necleo"
-    }
+        "MONGODB_URI": "mongodb://localhost:27017/Necleo"
+      }
   }
   
